@@ -36,7 +36,7 @@ public class RadioTest {
     void shouldOverMax() {
         Radio radio = new Radio();
         assertEquals(0, radio.getCurrentRadioStation());
-        radio.setCurrentRadioStation(10);
+        radio.setCurrentRadioStation(9);
         radio.nextStation();
         assertEquals(0, radio.getCurrentRadioStation());
     }
@@ -47,7 +47,7 @@ public class RadioTest {
         assertEquals(0, radio.getCurrentRadioStation());
         radio.setCurrentRadioStation(0);
         radio.prevStation();
-        assertEquals(10, radio.getCurrentRadioStation());
+        assertEquals(9, radio.getCurrentRadioStation());
     }
 
     @Test
@@ -55,7 +55,7 @@ public class RadioTest {
         Radio radio = new Radio();
         assertEquals(0, radio.getCurrentRadioStation());
         radio.setCurrentRadioStation(-1);
-        assertEquals(10, radio.getCurrentRadioStation());
+        assertEquals(9, radio.getCurrentRadioStation());
     }
 
     @Test
@@ -90,9 +90,9 @@ public class RadioTest {
     void shouldMaxValue() {
         Radio radio = new Radio();
         assertEquals(0, radio.getCurrentVolume());
-        radio.setCurrentVolume(100);
+        radio.setCurrentVolume(10);
         radio.plusVolume();
-        assertEquals(100, radio.getCurrentVolume());
+        assertEquals(10, radio.getCurrentVolume());
 
     }
 
@@ -109,8 +109,8 @@ public class RadioTest {
     void shouldOverMaxValue() {
         Radio radio = new Radio();
         assertEquals(0, radio.getCurrentVolume());
-        radio.setCurrentVolume(101);
-        assertEquals(100, radio.getCurrentVolume());
+        radio.setCurrentVolume(11);
+        assertEquals(10, radio.getCurrentVolume());
 
     }
 
