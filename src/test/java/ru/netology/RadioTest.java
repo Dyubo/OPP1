@@ -2,15 +2,13 @@ package ru.netology;
 
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Constructor;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class RadioTest {
     @Test
     void shouldRadioStationNumber() {
-        Radio radio = new Radio();
+        ru.netology.Radio radio = new ru.netology.Radio();
         assertEquals(0, radio.getCurrentRadioStation());
         radio.setCurrentRadioStation(7);
         assertEquals(7, radio.getCurrentRadioStation());
@@ -18,7 +16,7 @@ public class RadioTest {
 
     @Test
     void shouldKeyNext() {
-        Radio radio = new Radio();
+        ru.netology.Radio radio = new ru.netology.Radio();
         assertEquals(0, radio.getCurrentRadioStation());
         radio.setCurrentRadioStation(8);
         radio.nextStation();
@@ -27,7 +25,7 @@ public class RadioTest {
 
     @Test
     void shouldKeyPrev() {
-        Radio radio = new Radio();
+        ru.netology.Radio radio = new ru.netology.Radio();
         assertEquals(0, radio.getCurrentRadioStation());
         radio.setCurrentRadioStation(2);
         radio.prevStation();
@@ -36,7 +34,7 @@ public class RadioTest {
 
     @Test
     void shouldOverMax() {
-        Radio radio = new Radio();
+        ru.netology.Radio radio = new ru.netology.Radio();
         assertEquals(0, radio.getCurrentRadioStation());
         radio.setCurrentRadioStation(10);
         radio.nextStation();
@@ -45,7 +43,7 @@ public class RadioTest {
 
     @Test
     void shouldLessMin() {
-        Radio radio = new Radio();
+        ru.netology.Radio radio = new ru.netology.Radio();
         assertEquals(0, radio.getCurrentRadioStation());
         radio.setCurrentRadioStation(0);
         radio.prevStation();
@@ -54,7 +52,7 @@ public class RadioTest {
 
     @Test
     void shouldStationLessMin() {
-        Radio radio = new Radio();
+        ru.netology.Radio radio = new ru.netology.Radio();
         assertEquals(0, radio.getCurrentRadioStation());
         radio.setCurrentRadioStation(-1);
         assertEquals(10, radio.getCurrentRadioStation());
@@ -62,7 +60,7 @@ public class RadioTest {
 
     @Test
     void shouldStationOverMax() {
-        Radio radio = new Radio();
+        ru.netology.Radio radio = new ru.netology.Radio();
         assertEquals(0, radio.getCurrentRadioStation());
         radio.setCurrentRadioStation(12);
         assertEquals(0, radio.getCurrentRadioStation());
@@ -70,7 +68,7 @@ public class RadioTest {
 
     @Test
     void shouldKeyPlus() {
-        Radio radio = new Radio();
+        ru.netology.Radio radio = new ru.netology.Radio();
         assertEquals(0, radio.getCurrentVolume());
         radio.setCurrentVolume(7);
         radio.plusVolume();
@@ -80,7 +78,7 @@ public class RadioTest {
 
     @Test
     void shouldKeyMinus() {
-        Radio radio = new Radio();
+        ru.netology.Radio radio = new ru.netology.Radio();
         assertEquals(0, radio.getCurrentVolume());
         radio.setCurrentVolume(6);
         radio.minusVolume();
@@ -90,7 +88,7 @@ public class RadioTest {
 
     @Test
     void shouldMaxValue() {
-        Radio radio = new Radio();
+        ru.netology.Radio radio = new ru.netology.Radio();
         assertEquals(0, radio.getCurrentVolume());
         radio.setCurrentVolume(100);
         radio.plusVolume();
@@ -100,7 +98,7 @@ public class RadioTest {
 
     @Test
     void shouldLessMinValue() {
-        Radio radio = new Radio();
+        ru.netology.Radio radio = new ru.netology.Radio();
         assertEquals(0, radio.getCurrentVolume());
         radio.setCurrentVolume(0);
         radio.minusVolume();
@@ -109,7 +107,7 @@ public class RadioTest {
 
     @Test
     void shouldOverMaxValue() {
-        Radio radio = new Radio();
+        ru.netology.Radio radio = new ru.netology.Radio();
         assertEquals(0, radio.getCurrentVolume());
         radio.setCurrentVolume(101);
         assertEquals(100, radio.getCurrentVolume());
@@ -119,7 +117,7 @@ public class RadioTest {
 
     @Test
     void shouldOverMinValue() {
-        Radio radio = new Radio();
+        ru.netology.Radio radio = new Radio();
         assertEquals(0, radio.getCurrentVolume());
         radio.setCurrentVolume(-1);
         assertEquals(0, radio.getCurrentVolume());
