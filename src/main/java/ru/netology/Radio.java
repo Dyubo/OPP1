@@ -71,7 +71,7 @@ public class Radio {
             currentVolume = minVolume;
             return;
         }
-        currentVolume-=1;
+        currentVolume--;
     }
 
 
@@ -80,6 +80,6 @@ public class Radio {
             currentVolume = maxVolume;
             return;
         }
-        currentVolume+=1;
+        currentVolume++;
     }
 }
